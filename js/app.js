@@ -10593,7 +10593,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     const max = slider.max;
                     const percent = (value - min) / (max - min) * 100;
                     bullet.textContent = value;
-                    bullet.style.left = `calc(${percent}% - 15px)`;
+                    bullet.style.left = `calc(${percent}% - 1px)`;
                     slider.style.background = `\n        linear-gradient(\n          to right,\n          #000 0%,\n          #000 ${percent}%,\n          #ddd ${percent}%,\n          #ddd 100%\n        )\n      `;
                 }
             }));

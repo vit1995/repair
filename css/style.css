@@ -3,14 +3,6 @@
 @font-face {
   font-family: Gilroy;
   font-display: swap;
-  src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Gilroy;
-  font-display: swap;
   src: url("../fonts/Gilroy-UltraLight.woff2") format("woff2"), url("../fonts/Gilroy-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
@@ -61,22 +53,6 @@
   font-display: swap;
   src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff");
   font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Gilroy;
-  font-display: swap;
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Gilroy;
-  font-display: swap;
-  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
-  font-weight: 950;
   font-style: normal;
 }
 
@@ -936,9 +912,9 @@ body::after {
 }
 
 .range-container {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333333%;
-          flex: 0 1 33.333333%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1034,9 +1010,6 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: left 0.1s ease-out;
-  -o-transition: left 0.1s ease-out;
-  transition: left 0.1s ease-out;
   pointer-events: none;
 }
 
@@ -5956,7 +5929,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (max-width: 767px) {
   .rs-range {
-    min-width: 300px;
+    min-width: 200px;
   }
 }
 
@@ -6618,7 +6591,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .calculator__slide {
-    padding: 0.9375rem;
+    padding: 1.25rem;
   }
 
   .calculator__button-prev {
@@ -7280,6 +7253,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .calculator {
     padding-top: 0;
+  }
+
+  .calculator__wrapper {
+    padding-bottom: 40%;
   }
 
   .content-slide-calculator {
@@ -9256,15 +9233,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (padding: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+@supports (padding: clamp( 1.25rem , 1.0227272727rem  +  1.1363636364vw , 1.875rem )) {
     .calculator__slide {
-      padding: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem );
+      padding: clamp( 1.25rem , 1.0227272727rem  +  1.1363636364vw , 1.875rem );
     }
 }
 
-@supports not (padding: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+@supports not (padding: clamp( 1.25rem , 1.0227272727rem  +  1.1363636364vw , 1.875rem )) {
     .calculator__slide {
-      padding: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55);
+      padding: calc(1.25rem + 0.625 * (100vw - 20rem) / 55);
     }
 }
 
