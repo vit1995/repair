@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250628022349">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo"><img src="img/header/logo.svg" alt="#"></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link">наши работы</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">дизайн проекты</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">сметы</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">план работы</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">контакты</a></li>
+
+						</ul>
+					</nav>
+				</div>
+				<a href="tel:375293437866" class="header__button">+ 375 29 3437866</a>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"><svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g stroke="none" stroke-width="1" fill="#00000" fill-rule="evenodd">
+								<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+								<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+							</g>
+						</svg></button>
+					<div class="calculator__body">
+						<!-- Оболонка слайдера -->
+						<div id="calc" class="slide-calculator__slide-calculator slide-calculator-block">
+							<h4 class="slide-calculator-block__title"><svg class="mdi-icon mdi-24px" viewBox="0 0 24 24">
+									<path d="M17,21L14.25,18L15.41,16.84L17,18.43L20.59,14.84L21.75,16.25M12.8,21H5C3.89,21 3,20.11 3,19V5C3,3.89 3.89,3 5,3H19C20.11,3 21,3.89 21,5V12.8C20.39,12.45 19.72,12.2 19,12.08V5H5V19H12.08C12.2,19.72 12.45,20.39 12.8,21M12,17H7V15H12M14.68,13H7V11H17V12.08C16.15,12.22 15.37,12.54 14.68,13M17,9H7V7H17" stroke-width="0" fill-rule="nonzero"></path>
+								</svg>Ответьте на 9 вопросов и мы отправим вам примерную стоимость ремонта вашей квартиры через 15 мин.</h4>
+
+							<div class="calculator__progress-body">
+								<div class="fraction-controll">
+									<span class="fraction-controll__current">01</span>
+									<span>/</span>
+									<span class="fraction-controll__all">09</span>
+								</div>
+							</div>
+						</div>
+						<div class="calculator__pagination swiper-pagination"></div>
+
+						<div class="calculator__slider swiper swiper-container">
+							<!-- Частина слайдера, що рухається -->
+							<form data-popup-message="#popup-message" data-ajax action="files/sendmail/sendmail.php" class="calculator__wrapper swiper-wrapper">
+
+								<!--1 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Будет ли дизайн-проект?</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_1" class="radio__input " checked type="radio" value="Новостройка" name="step_1">
+												<label for="o_1" class="radio__label "><span class="radio__text ">Новостройка</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_2" class="radio__input " type="radio" value="Вторичка" name="step_1">
+												<label for="o_2" class="radio__label "><span class="radio__text ">Вторичка</span></label>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+								<!--2 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">У Вас новостройка или вторичка?</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_3" class="radio__input " checked type="radio" value="Новостройка" name="step_2">
+												<label for="o_3" class="radio__label "><span class="radio__text ">Да, проект на руках</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_4" class="radio__input " type="radio" value="Вторичка" name="step_2">
+												<label for="o_4" class="radio__label "><span class="radio__text ">Мне нужен проект от Вас</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_5" class="radio__input " type="radio" value="Вторичка" name="step_2">
+												<label for="o_5" class="radio__label "><span class="radio__text ">Вторичка</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_6" class="radio__input " type="radio" value="Вторичка" name="step_2">
+												<label for="o_6" class="radio__label "><span class="radio__text ">Нет, не нужен</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_7" class="radio__input " type="radio" value="Вторичка" name="step_2">
+												<label for="o_7" class="radio__label "><span class="radio__text ">Не знаю чего хочу, нужна консультация</span></label>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+								<!--3 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">В каком состоянии квартира?</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_8" class="radio__input " checked type="radio" value="Свободная планировка (без перегородок)" name="step_3">
+												<label for="o_8" class="radio__label "><span class="radio__text ">Свободная планировка (без перегородок)</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_9" class="radio__input " type="radio" value="Черновая отделка (перегородки, штукатурка, электрика)" name="step_3">
+												<label for="o_9" class="radio__label "><span class="radio__text ">Черновая отделка (перегородки, штукатурка, электрика)</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_10" class="radio__input " type="radio" value="Черновая отделка, только перегородки" name="step_3">
+												<label for="o_10" class="radio__label "><span class="radio__text ">Черновая отделка, только перегородки</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_11" class="radio__input " type="radio" value="Черновая отделка под демонтаж" name="step_3">
+												<label for="o_11" class="radio__label "><span class="radio__text ">Черновая отделка под демонтаж</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_12" class="radio__input " type="radio" value="Вторичное жилье под демонтаж" name="step_3">
+												<label for="o_12" class="radio__label "><span class="radio__text ">Вторичное жилье под демонтаж</span></label>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+								<!--4 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Сколько квадратов вместе с балконом?</h3>
+									<div class="slide-calculator__body">
+										<div class="calculation-two__range-container range-container">
+											<div class="range-slider"> <span id="rs-bullet" class="rs-label">25</span>
+												<input id="rs-range-line" class="rs-range" name="range" type="range" value="25" min="25" max="125">
+											</div>
+											<div class="box-minmax"> <span>25</span><span>125</span> </div>
+										</div>
+									</div>
+
+								</div>
+								<!--5 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Что делаем с потолком?</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_13" class="radio__input " checked type="radio" value="Потолок натяжной" name="step_5">
+												<label for="o_13" class="radio__label "><span class="radio__text ">Потолок натяжной</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_14" class="radio__input " type="radio" value="Штукатурный под окраску" name="step_5">
+												<label for="o_14" class="radio__label "><span class="radio__text ">Штукатурный под окраску</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_15" class="radio__input " type="radio" value="ГКЛ под окраску" name="step_5">
+												<label for="o_15" class="radio__label "><span class="radio__text ">ГКЛ под окраску</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_16" class="radio__input " type="radio" value="Скрытые карнизы" name="step_5">
+												<label for="o_16" class="radio__label "><span class="radio__text ">Скрытые карнизы</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_17" class="radio__input " type="radio" value="Подсветки по периметру" name="step_5">
+												<label for="o_17" class="radio__label "><span class="radio__text ">Подсветки по периметру</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_18" class="radio__input " type="radio" value="Встроенные светильники" name="step_5">
+												<label for="o_18" class="radio__label "><span class="radio__text ">Встроенные светильники</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_19" class="radio__input " type="radio" value="Трековые системы" name="step_5">
+												<label for="o_19" class="radio__label "><span class="radio__text ">Трековые системы</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_20" class="radio__input " type="radio" value="Светодиодные линии" name="step_5">
+												<label for="o_20" class="radio__label "><span class="radio__text ">Светодиодные линии</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_21" class="radio__input " type="radio" value="Еще не определились" name="step_5">
+												<label for="o_21" class="radio__label "><span class="radio__text ">Еще не определились</span></label>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+								<!--6 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Что делаем со стенами?</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_22" class="radio__input " checked type="radio" value="Стены под обои" name="step_6">
+												<label for="o_22" class="radio__label "><span class="radio__text ">Стены под обои</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_23" class="radio__input " type="radio" value="Стены под покраску" name="step_6">
+												<label for="o_23" class="radio__label "><span class="radio__text ">Стены под покраску</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_24" class="radio__input " type="radio" value="Звукоизоляция" name="step_6">
+												<label for="o_24" class="radio__label "><span class="radio__text ">Звукоизоляция</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_25" class="radio__input " type="radio" value="Монтаж перегородок" name="step_6">
+												<label for="o_25" class="radio__label "><span class="radio__text ">Монтаж перегородок</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_26" class="radio__input " type="radio" value="Расширение санузла" name="step_6">
+												<label for="o_26" class="radio__label "><span class="radio__text ">Расширение санузла</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_27" class="radio__input " type="radio" value="Демонтаж балконной рамы" name="step_6">
+												<label for="o_27" class="radio__label "><span class="radio__text ">Демонтаж балконной рамы</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_28" class="radio__input " type="radio" value="Декоративная штукатурка" name="step_6">
+												<label for="o_28" class="radio__label "><span class="radio__text ">Декоративная штукатурка</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_29" class="radio__input " type="radio" value="Еще не определились" name="step_6">
+												<label for="o_29" class="radio__label "><span class="radio__text ">Еще не определились</span></label>
+											</div>
+
+
+										</div>
+									</div>
+
+								</div>
+								<!--7 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Что делаем с полом?</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_30" class="radio__input " checked type="radio" value="Ламинат" name="step_7">
+												<label for="o_30" class="radio__label "><span class="radio__text ">Ламинат</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_31" class="radio__input " type="radio" value="Паркет" name="step_7">
+												<label for="o_31" class="radio__label "><span class="radio__text ">Паркет</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_32" class="radio__input " type="radio" value="Кварцвинил" name="step_7">
+												<label for="o_32" class="radio__label "><span class="radio__text ">Кварцвинил</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_33" class="radio__input " type="radio" value="Плитка" name="step_7">
+												<label for="o_33" class="radio__label "><span class="radio__text ">Плитка</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_34" class="radio__input " type="radio" value="Теплый пол" name="step_7">
+												<label for="o_34" class="radio__label "><span class="radio__text ">Теплый пол</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_35" class="radio__input " type="radio" value="Будем комбинировать" name="step_7">
+												<label for="o_35" class="radio__label "><span class="radio__text ">Будем комбинировать</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_36" class="radio__input " type="radio" value="Еще не определились" name="step_7">
+												<label for="o_36" class="radio__label "><span class="radio__text ">Еще не определились</span></label>
+											</div>
+
+
+										</div>
+									</div>
+
+								</div>
+								<!--8 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Укажите что будет в санузле.</h3>
+									<div class="slide-calculator__body">
+										<div class="radio ">
+											<div class="radio__item ">
+												<input data-required id="o_37" class="radio__input " checked type="radio" value="Совмещенный санузел" name="step_8">
+												<label for="o_37" class="radio__label "><span class="radio__text ">Совмещенный санузел</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_38" class="radio__input " type="radio" value="Раздельный санузел" name="step_8">
+												<label for="o_38" class="radio__label "><span class="radio__text ">Раздельный санузел</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_39" class="radio__input " type="radio" value="Ванная" name="step_8">
+												<label for="o_39" class="radio__label "><span class="radio__text ">Ванная</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_40" class="radio__input " type="radio" value="Душевой поддон" name="step_8">
+												<label for="o_40" class="radio__label "><span class="radio__text ">Душевой поддон</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_41" class="radio__input " type="radio" value="Инсталляция" name="step_8">
+												<label for="o_41" class="radio__label "><span class="radio__text ">Инсталляция</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_42" class="radio__input " type="radio" value="Унитаз" name="step_8">
+												<label for="o_42" class="radio__label "><span class="radio__text ">Унитаз</span></label>
+											</div>
+											<div class="radio__item ">
+												<input id="o_43" class="radio__input " type="radio" value="Бойлер" name="step_8">
+												<label for="o_43" class="radio__label "><span class="radio__text ">Бойлер</span></label>
+											</div>
+
+
+										</div>
+									</div>
+
+								</div>
+								<!--9 слайд -->
+								<div class="calculator__slide  swiper-slide slide-calculator slide-calculator--two slide-main-block">
+									<h3 class="slide-calculator__title">Куда отправить результат?</h3>
+									<div class="slide-calculator__body">
+										<select name="select" data-class-modif="form">
+											<option value="Telegram" selected>Telegram</option>
+											<option value="Viber">Viber</option>
+											<option value="3">WhatsApp</option>
+										</select>
+									</div>
+
+								</div>
+
+
+
+
+
+
+								<!-- Конечная страница !форма! -->
+								<div class="calculator__slide swiper-slide slide-calculator  slide-main-block">
+									<div class="slide-calculator-block__form">
+
+										<div class="slide-calculator-block__item">
+											<label class="slide-calculator-block__label">Как к вам обращаться?</label>
+											<input data-required type="text" name="name" data-error="Заполните поля" placeholder="Имя" class="slide-calculator-block__input input">
+										</div>
+										<div class="slide-calculator-block__item">
+											<label class="slide-calculator-block__label">Укажите номер мессенджера </label>
+											<input data-inputmask="'mask': '375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="slide-calculator-block__input form__input form-opportunity__input input">
+										</div>
+										<button type="submit" class="slide-calculator-block__button button">Получить результат </button>
+									</div>
+
+								</div>
+
+
+								<div id="progress" class="calculator__progress">
+
+									<div class="calculator__button-body">
+										<div type="button" class="calculator__button-next ">Далее <svg class="mdi-icon mdi-24px" viewBox="0 0 24 24">
+												<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
+											</svg> </div>
+
+										<div type="button" class="calculator__button-prev ">
+											назад
+											<svg class="mdi-icon mdi-24px" viewBox="0 0 24 24">
+												<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
+											</svg>
+										</div>
+									</div>
+
+								</div>
+
+							</form>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="popup-two" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content popup__content--form">
+					<button data-close type="button" class="popup__close"><svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g stroke="none" stroke-width="1" fill="#00000" fill-rule="evenodd">
+								<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+								<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+							</g>
+						</svg></button>
+					<div class="popup__body">
+						<h2 class="popup__title">Отправляем пример проекта</h2>
+						<form data-popup-message="#popup-message" data-ajax class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask': '375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input">
+							<input data-required autocomplete="off" type="text" name="name" data-error="Заполните поля" placeholder="Ваше Имя" class="popup__input input">
+							<select name="select" data-class-modif="form">
+								<option value="Telegram" selected>Telegram</option>
+								<option value="WhatsApp">WhatsApp</option>
+								<option value="Viber">Viber</option>
+							</select>
+							<button type="submit" class="popup__button">Прислать мне пример проекта </button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="popup-threa" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content popup__content--form">
+					<button data-close type="button" class="popup__close"><svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g stroke="none" stroke-width="1" fill="#00000" fill-rule="evenodd">
+								<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+								<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+							</g>
+						</svg></button>
+					<div class="popup__body">
+						<h2 class="popup__title">Отправляем смету</h2>
+						<form data-popup-message="#popup-message" data-ajax class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-inputmask="'mask': '375 (99)-999-99-99'" data-required type="text" name="phone" data-error="Заполните поля" placeholder="+375 (__) ___-__-__" class="popup__input input">
+							<input data-required autocomplete="off" type="text" name="name" data-error="Заполните поля" placeholder="Ваше Имя" class="popup__input input">
+							<select name="select" data-class-modif="form">
+								<option value="Telegram" selected>Telegram</option>
+								<option value="WhatsApp">WhatsApp</option>
+								<option value="Viber">Viber</option>
+							</select>
+							<button type="submit" class="popup__button">Прислать мне смету</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="popup-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"><svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g stroke="none" stroke-width="1" fill="#00000" fill-rule="evenodd">
+								<rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+								<rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+							</g>
+						</svg></button>
+					<div class="popup__body">
+						<h2 style="text-transform: uppercase;" class="popup__title">Спасибо ваше форма успешно отправлена!</h2>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<section data-fullscreen class="hero">
+				<img class="hero__image-bg" src="img/hero/hero.webp" alt="#">
+				<div class="hero__container">
+					<h2 class="hero__title">Ремонт и дизайн квартир в Минске</h2>
+					<p class="hero__text">от разработки проекта и закупки материалов до 100% реализации и клининга</p>
+					<a class="hero__button button" data-popup="#popup" href="#">Рассчитать стоимость</a>
+				</div>
+			</section>
+
+			<section class="acquaintance">
+				<div class="acquaintance__container">
+					<div class="acquaintance__content">
+						<h2 class="acquaintance__title title">Давайте<span>знакомиться</span></h2>
+						<ul class="acquaintance__list">
+							<li>Мы компания по ремонту и дизайну 7 комнат</li>
+							<li><strong>2013</strong> года ремонтируем квартиры в Минске</li>
+							<li>Помогаем с <strong>приемкой</strong> квартиры от девелопера</li>
+							<li>Выполняем бесплатный <strong>клининг</strong> после ремонта</li>
+							<li>Приступаем к работам в течение <strong>7 дней</strong></li>
+						</ul>
+					</div>
+					<div class="acquaintance__images">
+						<div class="acquaintance__image">
+							<img src="img/acquaintance/01.webp" alt="#">
+							<div class="acquaintance__image-bottom">
+								<div class="acquaintance__image-body">
+									<div class="acquaintance__image-number">11 лет</div>
+									<div class="acquaintance__image-text">в ремонтах квартир</div>
+
+								</div>
+								<div class="acquaintance__image-body">
+									<div class="acquaintance__image-number">60 мес.</div>
+									<div class="acquaintance__image-text">гарантия на работы</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="acquaintance__image acquaintance__image--circle">
+							<img src="img/acquaintance/02.webp" alt="#">
+							<div class="acquaintance__image-bottom">
+								<div class="acquaintance__image-body">
+									<div class="acquaintance__image-number">3 года</div>
+									<div class="acquaintance__image-text">в дизайн-проектах</div>
+
+								</div>
+								<div class="acquaintance__image-body">
+									<div class="acquaintance__image-number">>150</div>
+									<div class="acquaintance__image-text">выполненных работ</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="founder">
+				<div class="founder__container">
+					<h2 class="founder__title title">Основатель компании <span> Владимир Ермаков</span></h2>
+					<div class="founder__body">
+						<div class="founder__image">
+							<img src="img/founder/01.webp" alt="#">
+						</div>
+						<div data-showmore class="founder__showmore">
+							<div data-showmore-content="300" class="founder__content">
+								<p>Привет, меня зовут Владимир. Я основал компанию 7komnat в 2013 году. Начав свой путь с простого отделочника, я постепенно вырос до руководителя, со штатом прорабов, дизайнеров и руководителей разных направлений.</p>
+								<p>Моя главная цель — провести вас через все дебри дизайна и ремонта с минимальными затратами времени и денег. Наша команда всегда на стороне клиента: стараемся сэкономить ваш бюджет, выполняя только необходимые работы и рекомендуя проверенных поставщиков.</p>
+								<p>Подбор правильной команды это основная моя задача. Весь руководящий состав имеет высшее строительное или архитектурное образование, а рабочие проходят строгий отбор, потому что качество для нас всегда остается в приоритете. Мы поможем вам сделать ремонт без стресса: от приемки квартиры до заселения, с прозрачными ценами и полным контролем на каждом этапе.</p>
+
+							</div>
+							<button hidden data-showmore-button type="button" class="founder__more"><span>
+									Читать далее...</span><span>Скрыть</span></button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="estimation">
+				<div class="estimation__container">
+					<h2 class="estimation__title title">Оцените несколько наших <span>реализованных проектов</span></h2>
+					<div class="estimation__main">
+						<div class="estimation__body">
+							<div class="estimation__content content-estimation">
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">жилищный комплекс</p>
+									<p class="content-estimation__answer">Новая Боровая</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">площадь квартиры</p>
+									<p class="content-estimation__answer">8 месяцев</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">время ремонта</p>
+									<p class="content-estimation__answer">8 месяцев</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">стоимость работ</p>
+									<p class="content-estimation__answer">22 800$</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">черновые материалы</p>
+									<p class="content-estimation__answer">11 000$</p>
+
+								</div>
+							</div>
+							<div class="estimation__slider swiper">
+								<!-- Частина слайдера, що рухається -->
+								<div class="estimation__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/01.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/02.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/03.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/04.webp" alt="#">
+									</div>
+								</div>
+								<!-- Якщо потрібна пагінація -->
+								<div class="swiper-pagination"></div>
+								<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+								<button type="button" class="estimation-button-prev swiper-button-prev"></button>
+								<button type="button" class="estimation-button-next swiper-button-next"></button>
+								<!-- Якщо потрібен скролбар -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+						<div class="estimation__body">
+							<div class="estimation__content content-estimation">
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">жилищный комплекс</p>
+									<p class="content-estimation__answer">Минск Мир</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">площадь квартиры</p>
+									<p class="content-estimation__answer">72 м.кв.</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">время ремонта</p>
+									<p class="content-estimation__answer">6 месяцев</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">стоимость работ</p>
+									<p class="content-estimation__answer">15 800$</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">черновые материалы</p>
+									<p class="content-estimation__answer">7 900$</p>
+
+								</div>
+							</div>
+							<div class="estimation__slider swiper">
+								<!-- Частина слайдера, що рухається -->
+								<div class="estimation__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/01.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/02.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/03.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/04.webp" alt="#">
+									</div>
+								</div>
+								<!-- Якщо потрібна пагінація -->
+								<div class="swiper-pagination"></div>
+								<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+								<button type="button" class="estimation-button-prev swiper-button-prev"></button>
+								<button type="button" class="estimation-button-next swiper-button-next"></button>
+								<!-- Якщо потрібен скролбар -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+						<div class="estimation__body">
+							<div class="estimation__content content-estimation">
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">жилищный комплекс</p>
+									<p class="content-estimation__answer">Минск Мир</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">площадь квартиры</p>
+									<p class="content-estimation__answer">33 м.кв.</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">время ремонта</p>
+									<p class="content-estimation__answer">5 месяцев</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">стоимость работ</p>
+									<p class="content-estimation__answer">8 000$</p>
+
+								</div>
+								<div class="content-estimation__item">
+									<p class="content-estimation__question">черновые материалы</p>
+									<p class="content-estimation__answer">3 700$</p>
+
+								</div>
+							</div>
+							<div class="estimation__slider swiper">
+								<!-- Частина слайдера, що рухається -->
+								<div class="estimation__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/01.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/02.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/03.webp" alt="#">
+									</div>
+									<div class="estimation__slide swiper-slide">
+										<img src="img/estimation/04.webp" alt="#">
+									</div>
+								</div>
+								<!-- Якщо потрібна пагінація -->
+								<div class="swiper-pagination"></div>
+								<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+								<button type="button" class="estimation-button-prev swiper-button-prev"></button>
+								<button type="button" class="estimation-button-next swiper-button-next"></button>
+								<!-- Якщо потрібен скролбар -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<a class="estimation__button button" href="#">Рассчитать стоимость</a>
+				</div>
+			</section>
+			<section class="design">
+				<div class="design__container">
+					<h2 class="design__title title">Мы разрабатываем 3 типа <span>дизайн-проектов </span></h2>
+					<p class="design__text">В первую очередь мы строители, поэтому каждый дизайн-проект создается с учетом его 100% реальной реализации. На каждом этапе проект проверяют исполнители и дают технические рекомендации дизайнерам. Это гарантирует, что проект будет воплощен именно так, как задумано, без увеличения бюджета.</p>
+					<div class="design__items">
+						<div class="design__item">
+							<div class="design__name">Техно-проект </div>
+							<div class="design__price">18 $ <span>/м<sup>2</sup></span></div>
+							<div class="design__day">30 дней</div>
+							<a class="design__button button" data-popup="#popup-two" href="#">Скачать пример</a>
+						</div>
+						<div class="design__item">
+							<div class="design__name">Базовый-проект </div>
+							<div class="design__price">26 $ <span>/м<sup>2</sup></span></div>
+							<div class="design__day">40 дней</div>
+							<a class="design__button button" data-popup="#popup-two" href="#">Скачать пример</a>
+						</div>
+						<div class="design__item">
+							<div class="design__name">Полный-проект</div>
+							<div class="design__price">34 $ <span>/м<sup>2</sup></span></div>
+							<div class="design__day">50 дней</div>
+							<a class="design__button button" data-popup="#popup-two" href="#">Скачать пример</a>
+						</div>
+					</div>
+					<div class="design__swiper-body">
+						<div class="estimation__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="estimation__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/01.webp" alt="#">
+								</div>
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/02.webp" alt="#">
+								</div>
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/03.webp" alt="#">
+								</div>
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/04.webp" alt="#">
+								</div>
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="swiper-pagination"></div>
+							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+							<button type="button" class="estimation-button-prev swiper-button-prev"></button>
+							<button type="button" class="estimation-button-next swiper-button-next"></button>
+							<!-- Якщо потрібен скролбар -->
+							<div class="swiper-scrollbar"></div>
+						</div>
+						<div class="estimation__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="estimation__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/01.webp" alt="#">
+								</div>
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/02.webp" alt="#">
+								</div>
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/03.webp" alt="#">
+								</div>
+								<div class="estimation__slide swiper-slide">
+									<img src="img/estimation/04.webp" alt="#">
+								</div>
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="swiper-pagination"></div>
+							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+							<button type="button" class="estimation-button-prev swiper-button-prev"></button>
+							<button type="button" class="estimation-button-next swiper-button-next"></button>
+							<!-- Якщо потрібен скролбар -->
+							<div class="swiper-scrollbar"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="acceptance">
+				<div class="acceptance__container">
+					<h2 class="acceptance__title title">Приемка квартиры от застройщика <span>что вы получите после консультации</span>
+					</h2>
+					<div class="acceptance__body">
+						<div class="acceptance__images">
+							<img class="acceptance__image" src="img/acceptance/01.webp" alt="#">
+							<img class="acceptance__image acceptance__image--cercle" src="img/acceptance/02.webp" alt="#">
+
+						</div>
+						<ul class="acceptance__list">
+							<li>Акт с полным перечнем недостатков по квартире</li>
+							<li>Помощь при общении с застройщиком</li>
+							<li>Консультацию по будущему ремонту</li>
+							<li>Размеченные трассы отопления</li>
+							<li>Консультацию по оформлению квартиры в БРТИ</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="advantages__container">
+					<div class="advantages__content">
+						<h2 class="advantages__title title">Почему стоит делать <span>приемку с нами</span></h2>
+						<ul class="advantages__list">
+							<li>Проводим приемку квартиры от застройщика с учетом будущего ремонта.</li>
+							<li>Оцениваем, во сколько обойдется исправление отделки застройщика.</li>
+							<li>Стоимость приемки-<strong>150 р. , но если вы планируете ремонт с нами, то приемка-<strong>бесплатно.</strong> </strong> </li>
+							<li>Мы специализируемся только на приемке <strong>новостроек, </strong> </li>
+						</ul>
+					</div>
+					<div class="advantages__price-wrapper">
+						<div class="advantages__price-body">
+							<p class="advantages__price-text">Стоимость приемки </p>
+							<p class="advantages__price-number">150 р.</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="example">
+				<div class="example__container">
+					<h2 class="example__title title">Посмотрите пример смет <span>на ремонтные работы</span></h2>
+					<p class="example__text">Мы составляем подробную смету, включая стоимость потолка, пола, стен, а также электромонтажных и сантехнических работ. В процессе ремонта по согласованию с вами могут меняться некоторые позиции. Подробная смета позволяет легко отслеживать изменения стоимости и объемов работ.</p>
+					<div class="example__items">
+						<div class="example__item">
+							<img class="example__image" src="img/example/01.webp" alt="#">
+							<div class="example__date">
+								<p>30 м2 </p>
+								<p>Срок 2,5 месяца</p>
+							</div>
+							<a class="example__button button" data-popup="#popup-threa" href="#">Смета однушки</a>
+						</div>
+						<div class="example__item">
+							<img class="example__image" src="img/example/02.webp" alt="#">
+							<div class="example__date">
+								<p>42 м2 </p>
+								<p>Срок 3,5 месяца</p>
+							</div>
+							<a class="example__button button" data-popup="#popup-threa" href="#">Смета двушки</a>
+						</div>
+						<div class="example__item">
+							<img class="example__image" src="img/example/03.webp" alt="#">
+							<div class="example__date">
+								<p>55 м2 </p>
+								<p>Срок 4 месяца</p>
+							</div>
+							<a class="example__button button" data-popup="#popup-threa" href="#">Смета трешки</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="steps">
+				<div class="steps__container">
+					<h2 class="steps__title title">Подробные этапы работ <span>от приемки квартиры у застройщика до заселения</span></h2>
+					<div class="steps__items">
+						<div class="steps__item">
+							<div class="steps__number">1</div>
+							<div class="steps__content">
+								<div class="steps__name">Приемка квартиры <span class="steps__number--none">1</span></div>
+								<p class="steps__text">Мы берем на себя обязательства по приемке вашей квартиры от застройщика — это бесплатная услуга. Наши специалисты используют профессиональные инструменты, чтобы замерить все по нормативам. По итогу вы получаете отчет с выявленными недочетами, который можно передать застройщику для устранения. На этой встрече мы также обсуждаем ваши пожелания по будущему ремонту.</p>
+							</div>
+						</div>
+						<div class="steps__item steps__item--even ">
+							<div class="steps__number">2</div>
+							<div class="steps__content">
+								<div class="steps__name">Приемка квартиры <span class="steps__number--none">2</span></div>
+								<p class="steps__text">Мы берем на себя обязательства по приемке вашей квартиры от застройщика — это бесплатная услуга. Наши специалисты используют профессиональные инструменты, чтобы замерить все по нормативам. По итогу вы получаете отчет с выявленными недочетами, который можно передать застройщику для устранения. На этой встрече мы также обсуждаем ваши пожелания по будущему ремонту.</p>
+							</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__number">3</div>
+							<div class="steps__content">
+								<div class="steps__name">Приемка квартиры <span class="steps__number--none">3</span></div>
+								<p class="steps__text">Мы берем на себя обязательства по приемке вашей квартиры от застройщика — это бесплатная услуга. Наши специалисты используют профессиональные инструменты, чтобы замерить все по нормативам. По итогу вы получаете отчет с выявленными недочетами, который можно передать застройщику для устранения. На этой встрече мы также обсуждаем ваши пожелания по будущему ремонту.</p>
+							</div>
+						</div>
+						<div class="steps__item steps__item--even">
+							<div class="steps__number">4</div>
+							<div class="steps__content">
+								<div class="steps__name">Приемка квартиры <span class="steps__number--none">4</span></div>
+								<p class="steps__text">Мы берем на себя обязательства по приемке вашей квартиры от застройщика — это бесплатная услуга. Наши специалисты используют профессиональные инструменты, чтобы замерить все по нормативам. По итогу вы получаете отчет с выявленными недочетами, который можно передать застройщику для устранения. На этой встрече мы также обсуждаем ваши пожелания по будущему ремонту.</p>
+							</div>
+						</div>
+						<div class="steps__item">
+							<div class="steps__number">5</div>
+							<div class="steps__content">
+								<div class="steps__name">Приемка квартиры <span class="steps__number--none">3</span></div>
+								<p class="steps__text">Мы берем на себя обязательства по приемке вашей квартиры от застройщика — это бесплатная услуга. Наши специалисты используют профессиональные инструменты, чтобы замерить все по нормативам. По итогу вы получаете отчет с выявленными недочетами, который можно передать застройщику для устранения. На этой встрече мы также обсуждаем ваши пожелания по будущему ремонту.</p>
+							</div>
+						</div>
+						<div class="steps__item steps__item--even steps__item--last  ">
+							<div class="steps__number steps__number--last">6</div>
+							<div class="steps__content">
+								<div class="steps__name">Приемка квартиры <span class="steps__number--none">4</span></div>
+								<p class="steps__text">Мы берем на себя обязательства по приемке вашей квартиры от застройщика — это бесплатная услуга. Наши специалисты используют профессиональные инструменты, чтобы замерить все по нормативам. По итогу вы получаете отчет с выявленными недочетами, который можно передать застройщику для устранения. На этой встрече мы также обсуждаем ваши пожелания по будущему ремонту.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="social">
+				<div class="social__container">
+					<div class="social__content">
+						<h2 class="social__title title ">Следите за нами <span>в социальных сетях</span></h2>
+						<p class="social__text">Мы показываем ход выполнения ремонтных работ в соцсетях, так что Вы всегда сможете убедиться в качестве нашего подхода. Переходите, подписывайтесь, оставляйте комментарии.</p>
+					</div>
+					<div class="social__images">
+						<a class="social__image" href="#"><img src="img/social/01.webp" alt="#"></a>
+						<a class="social__image" href="#"><img src="img/social/02.webp" alt="#"></a>
+
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<h2 class="reviews__title title">Отзыв клиента</h2>
+
+					<div class="reviews__slider swiper">
+						<div class="reviews__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__name">Орлова Анна</div>
+									<div class="reviews__avatar"><img src="img/reviews/01.webp" alt="#"></div>
+									<a class="reviews__link" href="#">Видеообзор Instagram</a>
+								</div>
+								<div class="reviews__text">
+									<div data-showmore class="reviews__showmore">
+										<div data-showmore-content="350" class="reviews__content">
+											<p>ул. Теслы 16, Минск-Мир 20.02.2024 г.</p>
+											<p>"Хочу выразить огромную благодарность компании 7komnat, в лице Владимира и Алексея и абсолютно всех людей, причастных к ремонту! Персонал и бригада вежливые, отзывчивые и самое главное адекватные, тактичные и человечные люди, профессионалы своего дела помогающие абсолютно во всем! </p>
+											<p>Это очень важно, когда начинаешь ремонт и ждешь хорошего результата. Импонирует, что работы оговариваются заранее и стоимость известна на начальном этапе (подробная калькуляция, не было перерасхода ни по материалам, ни по стоимости работ).</p>
+											<p>Понравился гибкий подход к заказчику, в процессе отделочных работ у меня появились дополнительные пожелания, которые были учтены и своевременно реализованы. Черновые материалы покупали и привозили сами. За собой всё убирали, всегда было чисто и все аккуратно! Все во время и в срок! </p>
+											<p>Спасибо за помощь и поддержку в этом деле абсолютному профессионалу своего нелегкого дела, прорабу Алексею, хочется пожелать компании успехов в трудной и непростой работе, хороших клиентов и профессиональных мастеров. С ремонтными вопросами я к вам еще обращусь! Я очень довольна! И действительно, не пожалеете! Спасибо вам большое!</p>
+											<p>Результат оправдал все мои ожидания, огромная человеческая благодарность!"</p>
+										</div>
+										<button hidden data-showmore-button type="button" class="reviews__more"><span>Читать далее...</span><span>Скрыть</span></button>
+									</div>
+
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="reviews__item">
+									<div class="reviews__name">Орлова Анна</div>
+									<div class="reviews__avatar"><img src="img/reviews/01.webp" alt="#"></div>
+									<a class="reviews__link" href="#">Видеообзор Instagram</a>
+								</div>
+								<div class="reviews__text">
+									<div data-showmore class="reviews__showmore">
+										<div data-showmore-content="350" class="reviews__content">
+											<p>ул. Теслы 16, Минск-Мир 20.02.2024 г.</p>
+											<p>"Хочу выразить огромную благодарность компании 7komnat, в лице Владимира и Алексея и абсолютно всех людей, причастных к ремонту! Персонал и бригада вежливые, отзывчивые и самое главное адекватные, тактичные и человечные люди, профессионалы своего дела помогающие абсолютно во всем! </p>
+											<p>Это очень важно, когда начинаешь ремонт и ждешь хорошего результата. Импонирует, что работы оговариваются заранее и стоимость известна на начальном этапе (подробная калькуляция, не было перерасхода ни по материалам, ни по стоимости работ).</p>
+											<p>Понравился гибкий подход к заказчику, в процессе отделочных работ у меня появились дополнительные пожелания, которые были учтены и своевременно реализованы. Черновые материалы покупали и привозили сами. За собой всё убирали, всегда было чисто и все аккуратно! Все во время и в срок! </p>
+											<p>Спасибо за помощь и поддержку в этом деле абсолютному профессионалу своего нелегкого дела, прорабу Алексею, хочется пожелать компании успехов в трудной и непростой работе, хороших клиентов и профессиональных мастеров. С ремонтными вопросами я к вам еще обращусь! Я очень довольна! И действительно, не пожалеете! Спасибо вам большое!</p>
+											<p>Результат оправдал все мои ожидания, огромная человеческая благодарность!"</p>
+										</div>
+										<button hidden data-showmore-button type="button" class="reviews__more"><span>Читать далее...</span><span>Скрыть</span></button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+
+					</div>
+				</div>
+			</section>
+			<section class="partners">
+				<div class="partners__container">
+					<h2 class="partners__title title">Наши партнеры <span>за которых мы ручаемся</span></h2>
+					<p class="partners__text">За годы работы мы выстроили сеть партнеров, которых смело рекомендуем своим клиентам. Мы прошли не один десяток объектов вместе, так что смело обращайтесь.</p>
+					<div class="partners__items">
+						<a class="partners__item" href="#"><img src="img/partners/01.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/02.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/03.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/04.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/05.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/06.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/07.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/08.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/09.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/10.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/11.webp" alt="#"></a>
+						<a class="partners__item" href="#"><img src="img/partners/12.webp" alt="#"></a>
+
+					</div>
+				</div>
+			</section>
+			<section class="gallery">
+				<div class="gallery__container">
+					<h2 class="gallery__title title">Галлерея</h2>
+					<div data-gallery class="gallery__grid">
+						<a href="img/gallery/01.webp" class="gallery__item gallery__item--wide">
+							<img src="img/gallery/01.webp" alt="Фото 1" loading="lazy">
+						</a>
+						<a href="img/gallery/02.webp" class="gallery__item">
+							<img src="img/gallery/02.webp" alt="Фото 2" loading="lazy">
+						</a>
+						<a href="img/gallery/03.webp" class="gallery__item gallery__item--tall">
+							<img src="img/gallery/03.webp" alt="Фото 3" loading="lazy">
+						</a>
+						<a href="img/gallery/04.webp" class="gallery__item">
+							<img src="img/gallery/04.webp" alt="Фото 4" loading="lazy">
+						</a>
+						<a href="img/gallery/05.webp" class="gallery__item gallery__item--wide">
+							<img src="img/gallery/05.webp" alt="Фото 5" loading="lazy">
+						</a>
+
+						<a href="img/gallery/06.webp" class="gallery__item">
+							<img src="img/gallery/06.webp" alt="Фото 6" loading="lazy">
+						</a>
+						<a href="img/gallery/05.webp" class="gallery__item gallery__item--wide">
+							<img src="img/gallery/05.webp" alt="Фото 5" loading="lazy">
+						</a>
+						<a href="img/gallery/05.webp" class="gallery__item gallery__item--wide">
+							<img src="img/gallery/05.webp" alt="Фото 5" loading="lazy">
+						</a>
+						<a href="img/gallery/05.webp" class="gallery__item gallery__item--wide">
+							<img src="img/gallery/05.webp" alt="Фото 5" loading="lazy">
+						</a>
+						<a href="img/gallery/05.webp" class="gallery__item gallery__item--wide">
+							<img src="img/gallery/05.webp" alt="Фото 5" loading="lazy">
+						</a>
+						<a href="img/gallery/03.webp" class="gallery__item gallery__item--tall">
+							<img src="img/gallery/03.webp" alt="Фото 3" loading="lazy">
+						</a>
+						<a href="img/gallery/04.webp" class="gallery__item">
+							<img src="img/gallery/04.webp" alt="Фото 4" loading="lazy">
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="discount">
+				<div class="discount__container">
+					<h2 class="discount__title title">Earn 30%</h2>
+					<p class="discount__text">Of our commission on furnishings of your customers</p>
+					<div class="discount__body">
+						<div class="discount__items">
+							<div class="discount__item">
+								<div class="discount__item-image">
+									<img src="img/discount/01.webp" alt="#">
+
+								</div>
+								<p>Increase your profit</p>
+							</div>
+							<div class="discount__item">
+								<p>We will create a furnishing project, purchase, deliver and assemble all the furniture</p>
+							</div>
+							<div class="discount__item">
+								<p>Track your earnings after each deal in your personal account</p>
+							</div>
+							<div class="discount__item">
+								<p>You or your client can accept the provided service in person or online via photos</p>
+							</div>
+						</div>
+						<div class="discount__block block-discount">
+							<div class="block-discount__image"><img src="img/discount/02.webp" alt="#"></div>
+							<div class="block-discount__text">
+								<p>Furnished units are more attractive for the tenants</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="video">
+				<div class="video__container">
+					<!-- Оболонка слайдера -->
+					<div class="video__slider swiper">
+						<!-- Частина слайдера, що рухається -->
+						<div data-gallery class="video__wrapper swiper-wrapper">
+							<!-- Слайд -->
+
+							<a class="video__slide swiper-slide" data-tweet-text="lightGallery slide  4" data-src="https://www.youtube.com/watch?v=iHITxIKG6Z8&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fru.furni.ae%2F">
+								<img class="img-responsive" src="img/video/01.webp" />
+								<div class="video__block">
+									<p class="video__text">Меблировка 2br квартиры в Ahad residences</p>
+									<button class="video__button button">Смотреть видео</button>
+								</div>
+							</a>
+							<a class="video__slide swiper-slide" data-tweet-text="lightGallery slide  4" data-src="https://www.youtube.com/watch?v=iHITxIKG6Z8&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fru.furni.ae%2F">
+								<img class="img-responsive" src="img/video/01.webp" />
+								<div class="video__block">
+									<p class="video__text">Меблировка 2br квартиры в Ahad residences</p>
+									<button class="video__button button">Смотреть видео</button>
+								</div>
+							</a>
+							<a class="video__slide swiper-slide" data-tweet-text="lightGallery slide  4" data-src="https://www.youtube.com/watch?v=iHITxIKG6Z8&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fru.furni.ae%2F">
+								<img class="img-responsive" src="img/video/01.webp" />
+								<div class="video__block">
+									<p class="video__text">Меблировка 2br квартиры в Ahad residences</p>
+									<button class="video__button button">Смотреть видео</button>
+								</div>
+							</a>
+							<a class="video__slide swiper-slide" data-tweet-text="lightGallery slide  4" data-src="https://www.youtube.com/watch?v=iHITxIKG6Z8&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fru.furni.ae%2F">
+								<img class="img-responsive" src="img/video/01.webp" />
+								<div class="video__block">
+									<p class="video__text">Меблировка 2br квартиры в Ahad residences</p>
+									<button class="video__button button">Смотреть видео</button>
+								</div>
+							</a>
+							<a class="video__slide swiper-slide" data-tweet-text="lightGallery slide  4" data-src="https://www.youtube.com/watch?v=iHITxIKG6Z8&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fru.furni.ae%2F">
+								<img class="img-responsive" src="img/video/01.webp" />
+								<div class="video__block">
+									<p class="video__text">Меблировка 2br квартиры в Ahad residences</p>
+									<button class="video__button button">Смотреть видео</button>
+								</div>
+							</a>
+							<a class="video__slide swiper-slide" data-tweet-text="lightGallery slide  4" data-src="https://www.youtube.com/watch?v=iHITxIKG6Z8&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fru.furni.ae%2F">
+								<img class="img-responsive" src="img/video/01.webp" />
+								<div class="video__block">
+									<p class="video__text">Меблировка 2br квартиры в Ahad residences</p>
+									<button class="video__button button">Смотреть видео</button>
+								</div>
+							</a>
+
+						</div>
+						<!-- Якщо потрібна пагінація -->
+						<div class="video-pagination swiper-pagination"></div>
+						<button type="button" class="video-button-prev swiper-button-prev"></button>
+						<button type="button" class="video-button-next swiper-button-next"></button>
+
+					</div>
+				</div>
+			</section>
+			<section class="level">
+				<div class="level__container">
+					<div class="level__title title">Высокий уровень сервиса, к которому вы привыкли</div>
+					<div class="level__body">
+						<div class="level__top top-level">
+							<div class="top-level__item">
+								<h3 class="top-level__title">Меблировка</h3>
+								<ul class="top-level__list">
+									<li>Сделаем дизайн-проект, закупим мебель, технику и декор</li>
+									<li>Подключим воду, газ, электричество и интернет</li>
+									<li>Всё доставим, расставим по местам и подготовим квартиру к заселению</li>
+								</ul>
+							</div>
+							<div class="top-level__item"><img class="top-level__image-center" src="img/level/01.webp" alt="#"></div>
+							<div class="top-level__item top-level__item--bacr">
+								<p class="top-level__text">Стоимость меблировки апартаментов без учета стоимости мебели, техники и декора:</p>
+								<div class="top-level__block">
+									<div class="top-level__column">
+										<p>Студия – 3 000 AED</p>
+										<ul>
+											<li>1 спальня – 3 500 AED </li>
+											<li>2 спальни – 5 500 AED</li>
+											<li>3 спальни – 6 500 AED</li>
+										</ul>
+									</div>
+									<div class="top-level__column">
+										<img class="top-level__column-image" src="img/level/02.webp" alt="#">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="level__items">
+							<div class="level__item item-level level__item--one">
+								<h3 class="item-level__title">Дизайн-проект Меблировка</h3>
+								<p class="item-level__text">
+									С индивидуальным проектом вы будете уверены в результате. Он позволит просчитать стоимость меблировки заранее и уместить все, что вы хотите.
+									<a href="#">Узнать подробнее</a>
+								</p>
+								<div class="item-level__block">
+									<p class="item-level__text">Стоимость:</p>
+									<div class="item-level__price">1800 AED </div>
+									<p class="item-level__text">Стоимость действительна при условии реализации проекта с Furni*</p>
+								</div>
+							</div>
+							<div class="level__item level__item--two">
+								<h3 class="item-level__title">Обновление отделки</h3>
+								<p class="item-level__text">Сделаем фит-аут: покрасим стены, установим стеновые панели, шкафы, поменяем фасады кухни и внешнюю электрику</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="level__button button">Обсудить проект</a>
+				</div>
+			</section>
+			<section class="faq">
+				<div class="faq__container">
+					<h2 class="faq__title title">FAQ</h2>
+					<div class="faq__items">
+						<div class="faq__item">
+							<h3 class="faq__item-title">Можно заказать только одну услугу, например, только ремонт?</h3>
+							<div class="faq__text">Да, конечно, вы можете заказать только те услуги, которые вам нужны</div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Что входит в дизайн-проект?</h3>
+							<div class="faq__text">
+								<ul>
+									<li>•Замер квартиры</li>
+									<li>•Мудборд с мебелью, техникой и декором</li>
+									<li>•План квартиры с расстановкой мебели и техники</li>
+								</ul>
+								<a href="#">Узнать подробнее</a> или <a href="#">смотреть файлы</a>
+							</div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Где вы закупаете мебель?</h3>
+							<div class="faq__text">Мы работаем с крупнейшими магазинами ОАЭ и предоставляем вам мебель без наценки.</div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Чем занимается супервайзер?</h3>
+							<div class="faq__text">Супервайзер принимает доставки, контролирует сборку мебели и установку бытовой техники</div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Как работает гарантия?</h3>
+							<div class="faq__text">Наша гарантия распространяется на любые заводские дефекты мебельных изделий. С условиями вы можете ознакомиться <a href="#">здесь</a></div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Как я могу оплатить свой заказ?</h3>
+							<div class="faq__text">Для начала работ необходимо внести предоплату на наш расчетный счет или наличными в размере 100% суммы заказа</div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Какие сроки разработки дизайн-проекта?</h3>
+							<div class="faq__text">4−5 дней с момента интервью с дизайнером</div>
+						</div>
+						<div class="faq__item">
+							<h3 class="faq__item-title">Как быстро будет готова меблировка?</h3>
+							<div class="faq__text">Ваше жилье будет готово к заселению через 14 дней после внесения предоплаты</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="worker">
+				<div class="worker__container">
+					<h2 class="worker__title title">Наши сотрудники</h2>
+					<!-- Оболонка слайдера -->
+					<div class="worker__slider swiper">
+						<!-- Частина слайдера, що рухається -->
+						<div class="worker__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/01.webp" alt="#"></div>
+								<p class="worker__slider-name">Евгений</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/02.webp" alt="#"></div>
+								<p class="worker__slider-name">Олег</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/03.jpg" alt="#"></div>
+								<p class="worker__slider-name">Миша</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/01.webp" alt="#"></div>
+								<p class="worker__slider-name">Евгений</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/02.webp" alt="#"></div>
+								<p class="worker__slider-name">Олег</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/03.jpg" alt="#"></div>
+								<p class="worker__slider-name">Миша</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/01.webp" alt="#"></div>
+								<p class="worker__slider-name">Евгений</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/02.webp" alt="#"></div>
+								<p class="worker__slider-name">Олег</p>
+							</div>
+							<div class="worker__slide swiper-slide">
+								<div class="worker__slide-image"><img src="img/work/03.jpg" alt="#"></div>
+								<p class="worker__slider-name">Миша</p>
+							</div>
+						</div>
+						<!-- Якщо потрібна пагінація -->
+						<button type="button" class="worker-button-prev swiper-button-prev"></button>
+						<button type="button" class="worker-button-next swiper-button-next"></button>
+					</div>
+				</div>
+			</section>
+			<div class="map">
+				<div class="map__container">
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b1f82549db84fe6b029b4f10d0aceba1af0650f8eacc25240c88f8902133e4d&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<h2 class="footer__title">Свяжитесь с нами любым удобным способом</h2>
+				<div class="footer__items">
+					<div class="footer__item footer__item--social">
+						<div class="footer__block">
+							<a class="footer__link" href="#"><img src="img/footer/tel.svg" alt="#"></a>
+							<a class="footer__link" href="#"><img src="img/footer/viber.svg" alt="#"></a>
+							<a class="footer__link" href="#"><img src="img/footer/whatsap.svg" alt="#"></a>
+							<a class="footer__link" href="#"><img src="img/footer/ins.svg" alt="#"></a>
+							<a class="footer__link" href="#"><img src="img/footer/tik.svg" alt="#"></a>
+							<a class="footer__link" href="#"><img src="img/footer/you.svg" alt="#"></a>
+
+						</div>
+						<a class="footer__phone" href="tel:375293437866">+375 29 3437866</a>
+						<a class="footer__mail" href="mailto:crm7komnat@gmail.com">crm7komnat@gmail.com</a>
+					</div>
+					<a href="#" class="footer__item footer__item--logo ">
+						<img src="img/footer/logo.svg" alt="#">
+					</a>
+					<div class="footer__item footer__item--date">
+						<p class="footer__boss">Руководитель:<br>Синкевич Алексей Сергеевич</p>
+						<a class="footer__phone-boss" href="tel:+375333208597">+375 33 3208597</a>
+						<p>ООО «СемьСтройБригад» г. Минск, ул. Либкнехта 66, оф.207 Р/С: BY57PJCB30120809161000000933, ОАО «Приорбанк» </p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20250628022349"></script>
+</body>
+
+</html>
